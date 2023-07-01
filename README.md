@@ -4,7 +4,7 @@
 
 ActivityPub compatible server running on Cloudflare Worker.
 
-> **note**
+> **Note**  
 > This project still in working.
 
 <!-- Link definitions -->
