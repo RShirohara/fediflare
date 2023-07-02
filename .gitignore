@@ -125,3 +125,6 @@ dist
 # yarn v3
 .pnp.*
 .yarn
+
+# SvelteKit
+.svelte-kit
