@@ -1,0 +1,14 @@
+{
+  "name": "@apflare/prettier-config",
+  "description": "prettier config for apflare.",
+  "version": "0.0.0-local",
+  "private": true,
+  "main": ".prettierrc.json",
+  "devDependencies": {
+    "prettier-plugin-svelte": "^2.10.1"
+  },
+  "peerDependencies": {
+    "prettier": "workspace:^",
+    "svelte": "workspace:^"
+  }
+}

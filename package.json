@@ -8,6 +8,13 @@
     "./apps/*",
     "./packages/*"
   ],
-  "devDependencies": {},
-  "scripts": {}
+  "devDependencies": {
+    "eslint": "^8.44.0",
+    "prettier": "^2.8.8"
+  },
+  "eslintConfig": {
+    "root": true,
+    "extends": "@apflare/eslint-config"
+  },
+  "prettier": "@apflare/prettier-config"
 }
