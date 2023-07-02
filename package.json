@@ -8,6 +8,8 @@
     "./apps/*",
     "./packages/*"
   ],
-  "devDependencies": {},
-  "scripts": {}
+  "devDependencies": {
+    "prettier": "^2.8.8"
+  },
+  "prettier": "@apflare/prettier-config"
 }

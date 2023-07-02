@@ -1,6 +1,13 @@
 {
-  "cSpell.words": [
-    "apflare",
-    "rshirohara"
-  ]
+  "[javascript][typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json][jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[svelte]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "cSpell.words": ["apflare", "rshirohara"],
+  "javascript.format.enable": false
 }
