@@ -9,5 +9,7 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "cSpell.words": ["apflare", "rshirohara"],
-  "javascript.format.enable": false
+  "eslint.validate": ["svelte"],
+  "javascript.format.enable": false,
+  "typescript.tsdk": "node_modules/typescript/lib"
 }
