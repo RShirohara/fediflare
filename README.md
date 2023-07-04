@@ -2,9 +2,10 @@
 
 [![LICENSE][license-badge]][license]
 
-ActivityPub compatible server running on Cloudflare Worker.
+ActivityPub and Mastodon compatible server running on Cloudflare Workers.
 
-> **Note**  
+> **Note**
+>
 > This project still in working.
 
 <!-- Link definitions -->
