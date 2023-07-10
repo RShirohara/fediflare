@@ -11,5 +11,6 @@
   "cSpell.words": ["apflare", "rshirohara"],
   "eslint.validate": ["svelte"],
   "javascript.format.enable": false,
+  "npm.packageManager": "pnpm",
   "typescript.tsdk": "node_modules/typescript/lib"
 }

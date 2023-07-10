@@ -8,7 +8,7 @@
     "prettier-plugin-svelte": "^2.10.1"
   },
   "peerDependencies": {
-    "prettier": "workspace:^",
-    "svelte": "workspace:^"
+    "prettier": "^3.0.0",
+    "svelte": "^4.0.5"
   }
 }

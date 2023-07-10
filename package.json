@@ -3,12 +3,14 @@
   "description": "ActivityPub compatible server running on Cloudflare Worker.",
   "license": "MIT",
   "private": true,
-  "packageManager": "yarn@3.5.1",
+  "packageManager": "pnpm@8.6.7",
   "workspaces": [
     "./apps/*",
     "./packages/*"
   ],
   "devDependencies": {
+    "@apflare/eslint-config": "workspace:*",
+    "@apflare/prettier-config": "workspace:*",
     "eslint": "^8.44.0",
     "prettier": "^3.0.0"
   },

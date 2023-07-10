@@ -1,0 +1,41 @@
+name: Pnpm setup
+description: "Install pnpm and install dependency"
+
+inputs:
+  cwd:
+    description: "Changes node's `process.cwd()` if the project is not located on the root. Default to `process.cwd()`."
+    required: false
+    default: "."
+
+  cache-prefix:
+    description: "Add a specific cache-prefix."
+    required: false
+    default: "ci"
+
+runs:
+  using: "composite"
+
+  steps:
+    - name: Install pnpm
+      uses: pnpm/action-setup@v2
+      with:
+        run_install: false
+
+    - name: Expose pnpm config as "${GITHUB_OUTPUT}"
+      id: pnpm-config
+      shell: bash
+      working-directory: ${{ inputs.cwd }}
+      run: |
+        echo "STORE_PATH=$(pnpm store path)" >> ${GITHUB_OUTPUT}
+
+    - name: Setup pnpm cache
+      uses: actions/cache@v3
+      with:
+        path: ${{ steps.pnpm-config.outputs.STORE_PATH }}
+        key: pnpm-cache-${{ inputs.cache-prefix }}-${{ hashFiles(format('{0}/pnpm-lock.yaml', inputs.cwd)) }}
+        restore-keys: pnpm-cache-${{ inputs.cache-prefix }}-
+
+    - name: Install dependencies
+      shell: bash
+      working-directory: ${{ inputs.cwd }}
+      run: pnpm install
