@@ -5,7 +5,7 @@
   "private": true,
   "main": ".prettierrc.json",
   "devDependencies": {
-    "prettier-plugin-svelte": "^2.10.1"
+    "prettier-plugin-svelte": "^3.0.0"
   },
   "peerDependencies": {
     "prettier": "^3.0.0",
