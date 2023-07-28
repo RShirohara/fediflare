@@ -11,7 +11,7 @@
   "devDependencies": {
     "@apflare/eslint-config": "workspace:*",
     "@apflare/prettier-config": "workspace:*",
-    "eslint": "^8.45.0",
+    "eslint": "^8.46.0",
     "prettier": "^3.0.0"
   },
   "eslintConfig": {
