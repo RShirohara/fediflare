@@ -11,8 +11,15 @@
   "devDependencies": {
     "@apflare/eslint-config": "workspace:*",
     "@apflare/prettier-config": "workspace:*",
+    "@vitest/coverage-v8": "^0.33.0",
     "eslint": "^8.46.0",
-    "prettier": "^3.0.0"
+    "prettier": "^3.0.0",
+    "vite-tsconfig-paths": "^4.2.0",
+    "vitest": "^0.33.0"
+  },
+  "scripts": {
+    "test": "vitest",
+    "test:coverage": "vitest --coverage.enabled --coverage.reporter=text --coverage.reporter=json-summary --coverage.reporter=json"
   },
   "eslintConfig": {
     "root": true,
