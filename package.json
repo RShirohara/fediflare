@@ -3,7 +3,7 @@
   "description": "ActivityPub compatible server running on Cloudflare Worker.",
   "license": "MIT",
   "private": true,
-  "packageManager": "pnpm@8.6.7",
+  "packageManager": "pnpm@8.6.11",
   "workspaces": [
     "./apps/*",
     "./packages/*"
