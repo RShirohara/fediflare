@@ -3,16 +3,30 @@
   "description": "ActivityPub compatible server running on Cloudflare Worker.",
   "license": "MIT",
   "private": true,
-  "packageManager": "pnpm@8.6.7",
+  "type": "module",
+  "packageManager": "pnpm@8.6.11",
   "workspaces": [
     "./apps/*",
     "./packages/*"
   ],
   "devDependencies": {
-    "@apflare/eslint-config": "workspace:*",
     "@apflare/prettier-config": "workspace:*",
+    "@eslint/js": "^8.46.0",
+    "@typescript-eslint/eslint-plugin": "^6.2.0",
+    "@typescript-eslint/parser": "^6.2.0",
+    "@vitest/coverage-v8": "^0.33.0",
+    "eslint-config-prettier": "^8.9.0",
+    "eslint-plugin-svelte": "^2.32.4",
+    "eslint-plugin-vitest": "^0.2.8",
     "eslint": "^8.46.0",
-    "prettier": "^3.0.0"
+    "prettier": "^3.0.0",
+    "vite-tsconfig-paths": "^4.2.0",
+    "vitest": "^0.33.0"
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "test": "vitest",
+    "test:coverage": "vitest --coverage.enabled --coverage.reporter=text --coverage.reporter=json-summary --coverage.reporter=json"
   },
   "eslintConfig": {
     "root": true,
