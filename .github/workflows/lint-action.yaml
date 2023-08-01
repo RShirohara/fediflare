@@ -1,0 +1,50 @@
+name: Lint (GitHub Actions)
+
+on:
+  pull_request:
+    types: [opened, ready_for_review, review_requested]
+    paths: [".github/**/*.yaml"]
+  push:
+    branches: [main]
+
+permissions:
+  checks: write
+  contents: read
+
+jobs:
+  lint:
+    name: Lint
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3.5.3
+
+      - name: Setup actionlint
+        env:
+          ACTIONLINT_INSTALL_SCRIPT: https://raw.githubusercontent.com/rhysd/actionlint/main/scripts/download-actionlint.bash
+          ACTIONLINT_INSTALL_DIR: ${{ runner.temp }}/actionlint/bin
+          ACTIONLINT_VERSION: latest
+        run: |
+          mkdir -p "${ACTIONLINT_INSTALL_DIR}"
+          echo "${ACTIONLINT_INSTALL_DIR}" >> "${GITHUB_PATH}"
+
+          wget -O - -q "${ACTIONLINT_INSTALL_SCRIPT}" \
+          | bash -s -- \
+              "${ACTIONLINT_VERSION}" \
+              "${ACTIONLINT_INSTALL_DIR}"
+
+      - name: Setup reviewdog
+        uses: reviewdog/action-setup@v1.0.5
+
+      - name: Run actionlint
+        env:
+          REVIEWDOG_FORMAT: actionlint
+          REVIEWDOG_GITHUB_API_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REVIEWDOG_REPORTER: github-check
+        run: |
+          actionlint --oneline \
+          | reviewdog \
+              --efm="%f:%l:%c: %m" \
+              --name="Lint result (${REVIEWDOG_FORMAT})" \
+              --reporter="${REVIEWDOG_REPORTER}"

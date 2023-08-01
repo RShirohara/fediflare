@@ -1,5 +1,5 @@
-name: Pnpm setup
-description: "Install pnpm and install dependency"
+name: pnpm setup
+description: "Setup pnpm and install dependencies"
 
 inputs:
   cwd:
@@ -16,8 +16,8 @@ runs:
   using: "composite"
 
   steps:
-    - name: Install pnpm
-      uses: pnpm/action-setup@v2
+    - name: Setup pnpm
+      uses: pnpm/action-setup@v2.2.4
       with:
         run_install: false
 
@@ -29,7 +29,7 @@ runs:
         echo "STORE_PATH=$(pnpm store path)" >> ${GITHUB_OUTPUT}
 
     - name: Setup pnpm cache
-      uses: actions/cache@v3
+      uses: actions/cache@v3.3.1
       with:
         path: ${{ steps.pnpm-config.outputs.STORE_PATH }}
         key: pnpm-cache-${{ inputs.cache-prefix }}-${{ hashFiles(format('{0}/pnpm-lock.yaml', inputs.cwd)) }}
