@@ -1,9 +1,12 @@
 {
   "name": "@apflare/tsconfig",
   "description": "tsconfig.json definition for apflare.",
-  "version": "0.0.0-local",
+  "version": "0.0.0-local.0",
   "private": true,
   "files": [
     "./tsconfig.*.json"
-  ]
+  ],
+  "peerDependencies": {
+    "typescript": "^5.1.6"
+  }
 }
