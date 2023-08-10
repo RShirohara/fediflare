@@ -1,0 +1,71 @@
+name: Lint (Node.js package)
+
+on:
+  pull_request:
+    types: [opened, ready_for_review, review_requested]
+    paths:
+      [
+        "pnpm-lock.yaml",
+        "**/package.json",
+        "**/tsconfig.json",
+        "apps/**/*.js",
+        "apps/**/*.ts",
+        "packages/**/*.js",
+        "packages/**/*.ts",
+        ".github/workflows/lint-package.yaml"
+      ]
+  push:
+    branches: [main]
+
+permissions:
+  checks: write
+  contents: read
+
+jobs:
+  install:
+    name: Install dependencies
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3.5.3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3.7.0
+        with:
+          node-version: latest
+
+      - name: Setup pnpm and install dependencies
+        uses: ./.github/actions/setup-pnpm
+
+  lint:
+    name: Lint
+    needs: install
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3.5.3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3.7.0
+        with:
+          node-version: latest
+
+      - name: Setup pnpm and install dependencies
+        uses: ./.github/actions/setup-pnpm
+
+      - name: Setup reviewdog
+        uses: reviewdog/action-setup@v1.0.5
+
+      - name: Run eslint
+        env:
+          REVIEWDOG_FORMAT: eslint
+          REVIEWDOG_GITHUB_API_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REVIEWDOG_REPORTER: github-check
+        run: |
+          pnpm run lint \
+          | reviewdog \
+              -f="${REVIEWDOG_FORMAT}" \
+              --name="Lint result (${REVIEWDOG_FORMAT})" \
+              --reporter="${REVIEWDOG_REPORTER}"

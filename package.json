@@ -20,17 +20,15 @@
     "eslint-plugin-vitest": "^0.2.8",
     "eslint": "^8.46.0",
     "prettier": "^3.0.1",
+    "typescript": "^5.1.6",
     "vite-tsconfig-paths": "^4.2.0",
-    "vitest": "^0.34.1"
+    "vitest": "^0.34.1",
+    "wrangler": "^3.5.0"
   },
   "scripts": {
     "lint": "eslint .",
     "test": "vitest",
     "test:coverage": "vitest --coverage.enabled --coverage.reporter=text --coverage.reporter=json-summary --coverage.reporter=json"
-  },
-  "eslintConfig": {
-    "root": true,
-    "extends": "@apflare/eslint-config"
   },
   "prettier": "@apflare/prettier-config"
 }

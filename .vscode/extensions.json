@@ -3,8 +3,7 @@
     "dbaeumer.vscode-eslint",
     "editorconfig.editorconfig",
     "esbenp.prettier-vscode",
-    "ms-playwright.playwright",
     "svelte.svelte-vscode",
-    "zixuanchen.vitest-explorer",
+    "zixuanchen.vitest-explorer"
   ]
 }

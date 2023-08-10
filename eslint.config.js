@@ -16,18 +16,18 @@ export default [
         sourceType: "module",
         ecmaVersion: 2023,
         project: ["./apps/*/tsconfig.json", "./packages/*/tsconfig.json"]
-      },
-      plugins: {
-        "@typescript-eslint": ts
-      },
-      rules: {
-        ...ts.configs["strict-type-checked"].rules,
-        ...ts.configs["stylistic-type-checked"].rules,
-        "no-undef": "off",
-        "@typescript-eslint/consistent-type-exports": "warn",
-        "@typescript-eslint/consistent-type-imports": "warn",
-        "@typescript-eslint/no-import-type-side-effects": "warn"
       }
+    },
+    plugins: {
+      "@typescript-eslint": ts
+    },
+    rules: {
+      ...ts.configs["strict-type-checked"].rules,
+      ...ts.configs["stylistic-type-checked"].rules,
+      "no-undef": "off",
+      "@typescript-eslint/consistent-type-exports": "warn",
+      "@typescript-eslint/consistent-type-imports": "warn",
+      "@typescript-eslint/no-import-type-side-effects": "warn"
     }
   },
   {

@@ -1,9 +1,16 @@
 {
   "name": "@apflare/tsconfig",
   "description": "tsconfig.json definition for apflare.",
-  "version": "0.0.0-local",
+  "version": "0.0.0-local.0",
   "private": true,
   "files": [
     "./tsconfig.*.json"
-  ]
+  ],
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20230807.0"
+  },
+  "peerDependencies": {
+    "hono": "^3.4.1",
+    "typescript": "^5.1.6"
+  }
 }

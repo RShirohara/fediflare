@@ -1,0 +1,13 @@
+{
+  "name": "@apflare/backend",
+  "description": "apflare backend worker.",
+  "version": "0.1.0-alpha.0",
+  "dependencies": {
+    "@apflare/tsconfig": "workspace:*",
+    "hono": "^3.4.1"
+  },
+  "scripts": {
+    "dev": "wrangler dev src/index.ts",
+    "deploy": "wrangler deploy --minify src/index.ts"
+  }
+}
