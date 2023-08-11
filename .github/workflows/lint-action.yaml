@@ -35,7 +35,7 @@ jobs:
               "${ACTIONLINT_INSTALL_DIR}"
 
       - name: Setup reviewdog
-        uses: reviewdog/action-setup@v1.0.5
+        uses: reviewdog/action-setup@v1.0.6
 
       - name: Run actionlint
         env:
