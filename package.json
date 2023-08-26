@@ -18,7 +18,7 @@
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-svelte": "^2.32.4",
     "eslint-plugin-vitest": "^0.2.8",
-    "eslint": "^8.46.0",
+    "eslint": "^8.48.0",
     "prettier": "^3.0.1",
     "typescript": "^5.1.6",
     "vite-tsconfig-paths": "^4.2.0",
