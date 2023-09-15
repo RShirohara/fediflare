@@ -83,8 +83,8 @@ importers:
         version: 5.1.6
     devDependencies:
       '@cloudflare/workers-types':
-        specifier: ^4.20230821.0
-        version: 4.20230821.0
+        specifier: ^4.20230914.0
+        version: 4.20230914.0
 
 packages:
 
@@ -155,8 +155,8 @@ packages:
     dev: true
     optional: true
 
-  /@cloudflare/workers-types@4.20230821.0:
-    resolution: {integrity: sha512-lVQSyr5E4CEkQw7WIdsrMTj+kHjsm28mJ0B5AhNFByKR+16KTFsU/RW/nGLKHHW2jxT5lvYI+HjNQMzC9QR8Ng==}
+  /@cloudflare/workers-types@4.20230914.0:
+    resolution: {integrity: sha512-OVeN4lFVu1O0PJGZ2d0FwpK8lelFcr33qYOgCh77ErEYmEBO4adwnIxcIsdQbFbhF0ffN6joiVcljD4zakdaeQ==}
     dev: true
 
   /@esbuild-plugins/node-globals-polyfill@0.2.3(esbuild@0.17.19):
