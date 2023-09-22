@@ -4,7 +4,7 @@
   "version": "0.1.0-alpha.0",
   "dependencies": {
     "@apflare/tsconfig": "workspace:*",
-    "hono": "^3.5.8"
+    "hono": "^3.7.1"
   },
   "scripts": {
     "dev": "wrangler dev src/index.ts",
