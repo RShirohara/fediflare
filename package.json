@@ -11,7 +11,7 @@
   ],
   "devDependencies": {
     "@apflare/prettier-config": "workspace:*",
-    "@eslint/js": "^8.50.0",
+    "@eslint/js": "^8.51.0",
     "@typescript-eslint/eslint-plugin": "^6.7.5",
     "@typescript-eslint/parser": "^6.7.5",
     "@vitest/coverage-v8": "^0.34.6",
