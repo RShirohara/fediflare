@@ -7,7 +7,7 @@
     "./tsconfig.*.json"
   ],
   "devDependencies": {
-    "@cloudflare/workers-types": "^4.20231016.0"
+    "@cloudflare/workers-types": "^4.20231025.0"
   },
   "peerDependencies": {
     "hono": "^3.4.1",
