@@ -1,11 +1,11 @@
 name: Cleanup caches for closed branch
 
+permissions:
+  actions: write
+
 on:
   pull_request:
     types: [closed]
-
-permissions:
-  actions: write
 
 jobs:
   cleanup:
