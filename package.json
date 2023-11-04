@@ -26,8 +26,8 @@
   },
   "scripts": {
     "lint": "eslint .",
-    "test": "vitest",
-    "test:coverage": "vitest --coverage.enabled --coverage.reporter=text --coverage.reporter=json-summary --coverage.reporter=json"
+    "test": "vitest run --coverage.enabled --coverage.reportOnFailure --coverage.reporter=text --coverage.reporter=json-summary --coverage.reporter=json",
+    "test:watch": "vitest watch"
   },
   "prettier": "@apflare/prettier-config"
 }
