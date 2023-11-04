@@ -1,3 +1,6 @@
 {
-  "extends": ["@apflare/tsconfig/tsconfig.hono.json"]
+  "extends": ["@apflare/tsconfig/tsconfig.hono.json"],
+  "compilerOptions": {
+    "types": ["@cloudflare/workers-types"]
+  }
 }

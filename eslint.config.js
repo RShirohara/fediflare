@@ -2,7 +2,6 @@ import js from "@eslint/js";
 import ts from "@typescript-eslint/eslint-plugin";
 import tsParser from "@typescript-eslint/parser";
 import prettier from "eslint-config-prettier";
-import svelte from "eslint-plugin-svelte";
 import vitest from "eslint-plugin-vitest";
 
 export default [
@@ -28,17 +27,6 @@ export default [
       "@typescript-eslint/consistent-type-exports": "warn",
       "@typescript-eslint/consistent-type-imports": "warn",
       "@typescript-eslint/no-import-type-side-effects": "warn"
-    }
-  },
-  {
-    files: ["*.svelte"],
-    parser: tsParser,
-    parserOptions: {
-      extraFileExtensions: [".svelte"],
-      project: ["./apps/*/tsconfig.json", "./packages/*/tsconfig.json"]
-    },
-    rules: {
-      ...svelte.configs.recommended.rules
     }
   },
   {

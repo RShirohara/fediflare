@@ -6,6 +6,9 @@
     "@apflare/tsconfig": "workspace:*",
     "hono": "^3.9.2"
   },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20231025.0"
+  },
   "scripts": {
     "dev": "wrangler dev src/index.ts",
     "deploy": "wrangler deploy --minify src/index.ts"
