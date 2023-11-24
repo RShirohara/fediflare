@@ -7,7 +7,7 @@
     "hono": "^3.10.1"
   },
   "devDependencies": {
-    "@cloudflare/workers-types": "^4.20231025.0"
+    "@cloudflare/workers-types": "^4.20231121.0"
   },
   "scripts": {
     "dev": "wrangler dev src/index.ts",
