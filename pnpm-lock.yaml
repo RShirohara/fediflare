@@ -54,8 +54,8 @@ importers:
         specifier: workspace:*
         version: link:../../packages/tsconfig
       hono:
-        specifier: ^3.11.9
-        version: 3.11.9
+        specifier: ^3.11.11
+        version: 3.11.11
     devDependencies:
       '@cloudflare/workers-types':
         specifier: ^4.20231218.0
@@ -1728,8 +1728,8 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
-  /hono@3.11.9:
-    resolution: {integrity: sha512-vjwVHw/y9xXPf7a87XjAPE9d3NFLyDiDBHmTU5SsGiJoe4BSiU/Yiu5UB9orhP+YGkSwD7fzXmuG7lpvKnr15w==}
+  /hono@3.11.11:
+    resolution: {integrity: sha512-E3Xv7LnOjg7VXiu+t+YplDEYXvkxpcTCzZ3RUFQlcNXclSME8aiQAYwWpJPT6MQRRpa4TG5RlOolqeYEDEK3wg==}
     engines: {node: '>=16.0.0'}
     dev: false
 
