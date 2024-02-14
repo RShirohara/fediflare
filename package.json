@@ -16,7 +16,7 @@
     "@typescript-eslint/parser": "^7.0.1",
     "@vitest/coverage-v8": "^1.2.2",
     "eslint-config-prettier": "^9.1.0",
-    "eslint-plugin-vitest": "^0.3.20",
+    "eslint-plugin-vitest": "^0.3.22",
     "eslint": "^8.56.0",
     "prettier": "^3.2.5",
     "typescript": "^5.3.3",
